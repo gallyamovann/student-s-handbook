@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="РАЗДЕЛ АЛГЕБРЫ"
+        android:layout_width="345dp"
+        android:layout_height="25dp"
+        android:id="@+id/AlgebraHeader"
+        tools:layout_editor_absoluteY="56dp"
+        tools:layout_editor_absoluteX="29dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/AlgebraBackButton"
+        android:layout_width="353dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="К СПИСКУ ПРЕДМЕТОВ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_background"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

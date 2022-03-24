@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestInterface</string>
+    <string name="toContent">К СОДЕРЖАНИЮ</string>
+    <string name="student_s_handbook">STUDENT\'S HANDBOOK</string>
+</resources>
