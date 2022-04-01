@@ -11,10 +11,12 @@
         android:layout_width="0dp"
         android:layout_height="46dp"
         android:text="Изучаемая теория"
-        tools:layout_editor_absoluteX="0"
-        tools:layout_editor_absoluteY="0dp"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
 
     <TextView
         android:id="@+id/fromTheory"
@@ -23,10 +25,10 @@
         android:text="Изучаемая теория"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.611" />
+        app:layout_constraintVertical_bias="0.14" />
 
     <Button
         android:id="@+id/backToSubjects"
@@ -37,4 +39,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewData"
+        android:layout_width="366dp"
+        android:layout_height="378dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/backToSubjects"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromTheory" />
 </androidx.constraintlayout.widget.ConstraintLayout>

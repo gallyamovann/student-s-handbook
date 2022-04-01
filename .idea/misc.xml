@@ -3,32 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/TestInterface/app/src/main/res/layout/activity_practice.xml" value="0.1" />
-        <entry key="..\:/TestInterface/app/src/main/res/layout/activity_study_options.xml" value="0.1" />
-        <entry key="..\:/TestInterface/app/src/main/res/layout/activity_subjects.xml" value="0.1" />
-        <entry key="..\:/TestInterface/app/src/main/res/layout/activity_theory.xml" value="0.1" />
-        <entry key="..\:/Users/79523/Documents/PROJECT/TestInterface/app/src/main/res/layout/activity_algebra.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/79523/Documents/PROJECT/TestInterface/app/src/main/res/layout/activity_geometry.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/79523/Documents/PROJECT/TestInterface/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/79523/Documents/PROJECT/TestInterface/app/src/main/res/layout/activity_maths.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/79523/Documents/PROJECT/TestInterface/app/src/main/res/layout/activity_subjects.xml" value="0.264" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/drawable/button_background.xml" value="0.11197916666666667" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24820512820512822" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/drawable/roundedBtm.xml" value="0.24820512820512822" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/layout/activity_algebra.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/layout/activity_geometry.xml" value="0.264" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/layout/activity_maths.xml" value="0.1" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/layout/activity_study_options.xml" value="0.176" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/layout/activity_studyoptions.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/User/Desktop/TestInterface/app/src/main/res/layout/activity_subjects.xml" value="0.264" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/layout/activity_theory.xml" value="0.2" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

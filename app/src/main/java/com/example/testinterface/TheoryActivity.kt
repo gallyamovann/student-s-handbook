@@ -1,13 +1,22 @@
 package com.example.testinterface
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import java.io.IOException
+import java.sql.SQLException
+
 
 class TheoryActivity : AppCompatActivity() {
+    //
+    private var mDBHelper: DatabaseHelper? = null
+    private var mDb: SQLiteDatabase? = null
+    //
     var nameOfOption: String? = null
     var nameOfSubject: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +37,28 @@ class TheoryActivity : AppCompatActivity() {
             i.putExtras(extras)
             startActivity(i)
         }
+
+        //
+        mDBHelper = DatabaseHelper(this)
+
+        try {
+            mDBHelper!!.updateDataBase()
+        } catch (mIOException: IOException) {
+            throw Error("UnableToUpdateDatabase")
+        }
+
+        mDb = try {
+            mDBHelper!!.writableDatabase
+        } catch (mSQLException: SQLException) {
+            throw mSQLException
+        }
+        val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory_algebra", null)
+        cursor.moveToFirst()
+        findViewById<TextView>(R.id.TextViewData).text = cursor.getString(1);
+        cursor.close()
+
+
+
     }
 
     override fun onStart() {
