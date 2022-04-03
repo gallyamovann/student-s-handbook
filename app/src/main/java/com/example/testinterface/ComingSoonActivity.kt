@@ -1,23 +1,20 @@
 package com.example.testinterface
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class ComingSoonActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_coming_soon)
 
         findViewById<Button>(R.id.backToChosing).setOnClickListener {
-            Log.v("Main", "Button in main activity was pressed")
             val i = Intent(this, ChooseEgeActivity::class.java)
             startActivity(i)
         }
 
-        Log.v("Main", "Main activity was started")
     }
 
     override fun onStart() {

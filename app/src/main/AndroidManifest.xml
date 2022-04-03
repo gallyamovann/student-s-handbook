@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".SubjectsActivity" />
         <activity android:name=".StudyOptionsActivity" />
+        <activity android:name=".ChooseEgeActivity"/>
+        <activity android:name=".ComingSoonActivity"/>
     </application>
 
 </manifest>

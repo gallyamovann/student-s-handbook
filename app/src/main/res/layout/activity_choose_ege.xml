@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-31dp">
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fadeScrollbars="false"
+        android:filterTouchesWhenObscured="false"
+        android:fitsSystemWindows="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="ВЫБОР
+        ПРЕДМЕТА"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#070707"
+        android:textColorHighlight="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/toProfileMath"
+        android:layout_width="375dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="88dp"
+        android:text="МАТЕМАТИКА ПРОФИЛЬ"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toTopOf="@+id/toBasicMath"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <Button
+        android:id="@+id/toBasicMath"
+        android:layout_width="375dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="224dp"
+        android:text="МАТЕМАТИКА БАЗА"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toTopOf="@+id/toRus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <Button
+        android:id="@+id/toRus"
+        android:layout_width="375dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="360dp"
+        android:text="РУССКИЙ ЯЗЫК"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/toMain"
+        android:layout_width="263dp"
+        android:layout_height="60dp"
+        android:text="ВЕРНУТЬСЯ НАЗАД"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toRus"
+        app:layout_constraintVertical_bias="0.545" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
