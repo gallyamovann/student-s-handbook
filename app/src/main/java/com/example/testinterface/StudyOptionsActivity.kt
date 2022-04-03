@@ -37,6 +37,7 @@ class StudyOptionsActivity : AppCompatActivity() {
             Log.v("Subjects", "Back-to-subjects-activity button was pressed")
             val i = Intent(this, SubjectsActivity::class.java)
             startActivity(i)
+            //finish()
         }
     }
 

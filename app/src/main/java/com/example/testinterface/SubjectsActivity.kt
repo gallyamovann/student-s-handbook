@@ -18,6 +18,7 @@ class SubjectsActivity : AppCompatActivity() {
             Log.v("Subjects", "Back-to-main-activity button was pressed")
             val i = Intent(this, MainActivity::class.java)
             startActivity(i)
+           // finish()
         }
 
         findViewById<Button>(R.id.buttonAlgebra).setOnClickListener {

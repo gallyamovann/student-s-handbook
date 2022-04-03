@@ -23,9 +23,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SubjectsActivity" />
-        <activity android:name=".AlgebraActivity" />
-        <activity android:name=".GeometryActivity" />
-        <activity android:name=".MathsActivity" />
         <activity android:name=".StudyOptionsActivity" />
     </application>
 

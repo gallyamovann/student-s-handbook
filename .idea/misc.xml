@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/drawable/button_background.xml" value="0.17" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/font-v26/font.xml" value="0.1" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/font/font.xml" value="0.1" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/layout/activity_choose_ege.xml" value="0.1322463768115942" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/layout/activity_main.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/layout/activity_maths.xml" value="0.1322463768115942" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/layout/activity_practice.xml" value="0.264" />
+        <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/layout/activity_study_options.xml" value="0.1322463768115942" />
         <entry key="..\:/Users/User/Desktop/TestInterface_2/TestInterface/app/src/main/res/layout/activity_theory.xml" value="0.2" />
       </map>
     </option>
