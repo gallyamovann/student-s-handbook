@@ -32,7 +32,7 @@ class ChooseEgeActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.toMain).setOnClickListener {
             Log.v(" ChooseEgeActivity", "toMain button was pressed")
-            val i = Intent(this, ComingSoonActivity::class.java)
+            val i = Intent(this, MainActivity::class.java)
             startActivity(i)
         }
         Log.v(" ChooseEgeActivity", "Activity was started")

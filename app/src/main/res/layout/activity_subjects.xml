@@ -6,59 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonAlgebra"
-        android:layout_width="353dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="АЛГЕБРА"
-        app:layout_constraintBottom_toTopOf="@+id/buttonGeometry"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subjectRecycler"
+        android:layout_width="423dp"
+        android:layout_height="494dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:background="@drawable/button_background"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/buttonGeometry"
-        android:layout_width="353dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="ГЕОМЕТРИЯ"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMaths"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAlgebra"
-        android:background="@drawable/button_background"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/buttonMaths"
-        android:layout_width="353dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="398dp"
-        android:text="ОБЩАЯ МАТЕМАТИКА"
-        app:layout_constraintBottom_toTopOf="@+id/backButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGeometry"
-        android:background="@drawable/button_background"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/backButton"
@@ -68,20 +23,27 @@
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_background"
         android:text="ВЕРНУТЬСЯ НАЗАД"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/button_background"
+        app:layout_constraintTop_toBottomOf="@+id/subjectRecycler"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:text="СПИСОК ПРЕДМЕТОВ"
-        android:layout_width="345dp"
-        android:layout_height="25dp"
         android:id="@+id/textView"
-        tools:layout_editor_absoluteY="56dp"
-        tools:layout_editor_absoluteX="29dp"
+        android:layout_width="387dp"
+        android:layout_height="66dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="задание ЕГЭ"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
