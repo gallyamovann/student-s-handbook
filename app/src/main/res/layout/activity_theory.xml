@@ -40,11 +40,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <com.judemanutd.katexview.KatexView
         android:id="@+id/TextViewData"
         android:layout_width="366dp"
         android:layout_height="378dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/backToSubjects"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

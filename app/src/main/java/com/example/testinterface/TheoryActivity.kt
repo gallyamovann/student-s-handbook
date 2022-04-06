@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.io.IOException
 import java.sql.SQLException
-
+import kotlinx.android.synthetic.main.activity_theory.*
 
 class TheoryActivity : AppCompatActivity() {
     //
@@ -54,11 +54,8 @@ class TheoryActivity : AppCompatActivity() {
         }
         val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory_algebra", null)
         cursor.moveToFirst()
-        findViewById<TextView>(R.id.TextViewData).text = cursor.getString(1);
+        TextViewData.setText(cursor.getString(1))
         cursor.close()
-
-
-
     }
 
     override fun onStart() {

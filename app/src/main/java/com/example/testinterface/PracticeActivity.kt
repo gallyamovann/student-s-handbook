@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_practice.*
 import java.io.IOException
 import java.sql.SQLException
 
@@ -52,7 +53,7 @@ class PracticeActivity : AppCompatActivity() {
         }
         val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory_algebra", null)
         cursor.moveToFirst()
-        findViewById<TextView>(R.id.textViewTask).text = cursor.getString(1);
+        textViewTask.setText(cursor.getString(1))
         cursor.close()
     }
 
