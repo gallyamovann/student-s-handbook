@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SubjectsActivity" />
+        <activity android:name=".TaskListActivity" />
         <activity android:name=".StudyOptionsActivity" />
         <activity android:name=".ChooseEgeActivity"/>
         <activity android:name=".ComingSoonActivity"/>

@@ -14,7 +14,7 @@ class ChooseEgeActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.toProfileMath).setOnClickListener {
             Log.v(" ChooseEgeActivity", "toProfileMath button was pressed")
-            val i = Intent(this, SubjectsActivity::class.java)
+            val i = Intent(this, TaskListActivity::class.java)
             startActivity(i)
         }
 

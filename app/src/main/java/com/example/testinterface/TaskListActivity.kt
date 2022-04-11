@@ -13,7 +13,7 @@ import com.example.testinterface.adapter.CellClickListener
 import com.example.testinterface.adapter.SubjectItemAdapter
 import com.example.testinterface.model.SubjectItem
 
-class SubjectsActivity : AppCompatActivity(), CellClickListener {
+class TaskListActivity : AppCompatActivity(), CellClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_subjects)
@@ -22,7 +22,8 @@ class SubjectsActivity : AppCompatActivity(), CellClickListener {
         val recyclerView: RecyclerView = findViewById(R.id.subjectRecycler)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = SubjectItemAdapter(this, fetchList(),this)
+        val list : ArrayList<SubjectItem> = fetchList();
+        recyclerView.adapter = SubjectItemAdapter(this, list,this)
 
 
         findViewById<Button>(R.id.backButton).setOnClickListener {
@@ -54,9 +55,9 @@ class SubjectsActivity : AppCompatActivity(), CellClickListener {
         val extras = Bundle()
        // Log.v(, )
         val i = Intent(this, StudyOptionsActivity::class.java)
-        //TODO передача информации о номере задачи
-        // extras.putString("", );
-        //i.putExtras(extras)
+        // передача информации о номере задачи
+        extras.putInt("taskNumber",data.id)
+        i.putExtras(extras)
         startActivity(i)
 
     }

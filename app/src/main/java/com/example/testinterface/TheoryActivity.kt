@@ -18,22 +18,22 @@ class TheoryActivity : AppCompatActivity() {
     private var mDb: SQLiteDatabase? = null
     //
     var nameOfOption: String? = null
-    var nameOfSubject: String? = null
+    var taskNumber: Int ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_theory)
         val intentExtras = intent.extras
         if (intentExtras != null) {
             nameOfOption = intentExtras!!.getString("nameOfOption", "Default")
-            nameOfSubject = intentExtras!!.getString("nameOfSubject", "Default")
+            taskNumber = intentExtras!!.getInt("taskNumber")
         }
         findViewById<TextView>(R.id.fromOption).text = nameOfOption;
-        findViewById<TextView>(R.id.fromTheory).text = nameOfSubject;
+        findViewById<TextView>(R.id.fromTheory).text = taskNumber.toString();
         findViewById<Button>(R.id.backToSubjects).setOnClickListener {
             val extras = Bundle()
             Log.v("Subjects", "Back-to-subjects-activity button was pressed")
             val i = Intent(this, StudyOptionsActivity::class.java)
-            extras.putString("nameOfSubject", nameOfSubject);
+            taskNumber?.let { it1 -> extras.putInt("taskNumber", it1) };
             i.putExtras(extras)
             startActivity(i)
         }

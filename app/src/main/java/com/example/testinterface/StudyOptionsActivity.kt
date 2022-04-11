@@ -7,19 +7,21 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class StudyOptionsActivity : AppCompatActivity() {
-    var nameOfSubject: String? = null
+    //var nameOfSubject: String? = null
+    var taskNumber: Int ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_study_options)
         val intentExtras = intent.extras
         if (intentExtras != null) {
-            nameOfSubject = intentExtras!!.getString("nameOfSubject", "Default")
+            taskNumber = intentExtras!!.getInt("taskNumber")
         }
         val extras = Bundle()
         findViewById<Button>(R.id.TheoryButton).setOnClickListener {
             Log.v("Subjects", "Forward-to-Theory-activity button was pressed")
-            extras.putString("nameOfSubject", nameOfSubject);
+            //extras.putInt("taskNumber", taskNumber);
+            taskNumber?.let { it1 -> extras.putInt("taskNumber", it1) }
             extras.putString("nameOfOption", "Theory")
             val i = Intent(this, TheoryActivity::class.java)
             i.putExtras(extras)
@@ -27,7 +29,7 @@ class StudyOptionsActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.PracticeButton).setOnClickListener {
             Log.v("Subjects", "Forward-to-Practice-activity button was pressed")
-            extras.putString("nameOfSubject", nameOfSubject);
+            taskNumber?.let { it1 -> extras.putInt("taskNumber", it1) }
             extras.putString("nameOfOption", "Practice")
             val i = Intent(this, PracticeActivity::class.java)
             i.putExtras(extras)
@@ -35,7 +37,7 @@ class StudyOptionsActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.backToSubjects).setOnClickListener {
             Log.v("Subjects", "Back-to-subjects-activity button was pressed")
-            val i = Intent(this, SubjectsActivity::class.java)
+            val i = Intent(this, TaskListActivity::class.java)
             startActivity(i)
             //finish()
         }

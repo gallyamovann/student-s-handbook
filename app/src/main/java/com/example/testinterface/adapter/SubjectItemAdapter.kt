@@ -10,8 +10,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testinterface.model.SubjectItem
 import com.example.testinterface.R
-import com.example.testinterface.SubjectsActivity
-import com.example.testinterface.adapter.CellClickListener
 
 
 class SubjectItemAdapter(private val context: Context,

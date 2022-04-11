@@ -5,4 +5,5 @@ class SubjectItem (
     var icon: Int,
     var title: String,
    // var color: String,
+
 )
