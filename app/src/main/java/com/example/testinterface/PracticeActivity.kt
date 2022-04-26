@@ -51,7 +51,7 @@ class PracticeActivity : AppCompatActivity() {
         } catch (mSQLException: SQLException) {
             throw mSQLException
         }
-        val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory_algebra", null)
+        val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM practice", null)
         cursor.moveToFirst()
         textViewTask.setText(cursor.getString(1))
         cursor.close()

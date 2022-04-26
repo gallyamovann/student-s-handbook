@@ -24,16 +24,16 @@ class TheoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_theory)
         val intentExtras = intent.extras
         if (intentExtras != null) {
-            nameOfOption = intentExtras!!.getString("nameOfOption", "Default")
-            taskNumber = intentExtras!!.getInt("taskNumber")
+            nameOfOption = intentExtras.getString("nameOfOption", "Default")
+            taskNumber = intentExtras.getInt("taskNumber")
         }
-        findViewById<TextView>(R.id.fromOption).text = nameOfOption;
-        findViewById<TextView>(R.id.fromTheory).text = taskNumber.toString();
+        findViewById<TextView>(R.id.fromOption).text = nameOfOption
+        findViewById<TextView>(R.id.fromTheory).text = taskNumber.toString()
         findViewById<Button>(R.id.backToSubjects).setOnClickListener {
             val extras = Bundle()
             Log.v("Subjects", "Back-to-subjects-activity button was pressed")
             val i = Intent(this, StudyOptionsActivity::class.java)
-            taskNumber?.let { it1 -> extras.putInt("taskNumber", it1) };
+            taskNumber?.let { it1 -> extras.putInt("taskNumber", it1) }
             i.putExtras(extras)
             startActivity(i)
         }
@@ -52,29 +52,10 @@ class TheoryActivity : AppCompatActivity() {
         } catch (mSQLException: SQLException) {
             throw mSQLException
         }
-        val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory_algebra", null)
+        val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory", null)
         cursor.moveToFirst()
         TextViewData.setText(cursor.getString(1))
         cursor.close()
     }
 
-    override fun onStart() {
-        super.onStart()
-    }
-
-    override fun onResume() {
-        super.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
 }
