@@ -42,12 +42,14 @@
 
     <com.judemanutd.katexview.KatexView
         android:id="@+id/TextViewData"
-        android:layout_width="425dp"
-        android:layout_height="501dp"
+        android:layout_width="384dp"
+        android:layout_height="497dp"
         android:overScrollMode="ifContentScrolls"
         app:layout_constraintBottom_toTopOf="@+id/backToSubjects"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.544" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

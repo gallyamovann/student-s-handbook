@@ -52,7 +52,7 @@ class TheoryActivity : AppCompatActivity() {
         } catch (mSQLException: SQLException) {
             throw mSQLException
         }
-        val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory", null)
+        val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory_algebra", null)
         var str = ""
         if (cursor != null) {
             if (cursor.moveToPosition(taskNumber.toString().toInt() - 1)) {
