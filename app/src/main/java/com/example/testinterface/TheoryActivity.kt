@@ -53,9 +53,18 @@ class TheoryActivity : AppCompatActivity() {
             throw mSQLException
         }
         val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM theory", null)
-        cursor.moveToFirst()
-        TextViewData.setText(cursor.getString(1))
-        cursor.close()
+        var str = ""
+        if (cursor != null) {
+            if (cursor.moveToPosition(taskNumber.toString().toInt() - 1)) {
+                for (cn in cursor.getColumnNames()) {
+                    str = cursor.getString(cursor.getColumnIndex(cn))
+                }
+            }
+            TextViewData.setText(str)
+            cursor.close()
+        } else {
+            Log.v("LOG_TAG", "Cursor is null")
+        }
     }
 
 }
