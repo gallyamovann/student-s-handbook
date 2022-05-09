@@ -79,17 +79,22 @@ class PracticeActivity : AppCompatActivity() {
                 }
             }
             else{
-                //TODO если дошли до конца то куда-то возвращаться?
-                cursor.moveToNext()
-                findViewById<Button>(R.id.CheckAnswerOrMoveNext).setBackgroundColor(resources.getColor(R.color.purple_500))
-                findViewById<Button>(R.id.CheckAnswerOrMoveNext).text = "➜"
-                textViewPractice.setText(cursor.getString(1))
-                isCheckNow = true
+                do {
+                    cursor.moveToNext()
+                    findViewById<Button>(R.id.CheckAnswerOrMoveNext).setBackgroundColor(
+                        resources.getColor(
+                            R.color.purple_500
+                        )
+                    )
+                    findViewById<Button>(R.id.CheckAnswerOrMoveNext).text = "➜"
+                    textViewPractice.setText(cursor.getString(1))
+                    isCheckNow = true
+                } while ((!cursor.isLast))
             }
         }
 
 
-        //cursor.close()
+        cursor.close()
     }
 
 }
