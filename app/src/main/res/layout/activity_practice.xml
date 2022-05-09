@@ -37,42 +37,35 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.judemanutd.katexview.KatexView
-        android:id="@+id/textViewTask"
-        android:layout_width="413dp"
-        android:layout_height="315dp"
+        android:id="@+id/textViewPractice"
+        android:layout_width="352dp"
+        android:layout_height="302dp"
         android:overScrollMode="ifContentScrolls"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="69dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="341dp"
-        android:layout_marginLeft="341dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="145dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/fromOption"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="404dp"
+        android:layout_height="78dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/backToSubjects"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTask" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="341dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/textInputPractice"
+            android:layout_width="257dp"
+            android:layout_height="63dp"
             android:hint="hint" />
-    </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/CheckAnswerOrMoveNext"
+            android:layout_width="142dp"
+            android:layout_height="48dp"
+            android:text="➜" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

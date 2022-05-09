@@ -19,13 +19,13 @@ class TaskListActivity : AppCompatActivity(), CellClickListener {
         setContentView(R.layout.activity_subjects)
         val extras = Bundle()
 
+        // Displaying list of tasks
         val recyclerView: RecyclerView = findViewById(R.id.subjectRecycler)
-
         recyclerView.layoutManager = LinearLayoutManager(this)
         val list : ArrayList<SubjectItem> = fetchList();
         recyclerView.adapter = SubjectItemAdapter(this, list,this)
 
-
+        //if some subject was clicked, go to next activity
         findViewById<Button>(R.id.backButton).setOnClickListener {
             Log.v("Subjects", "Back button was pressed")
             val i = Intent(this, ChooseEgeActivity::class.java)
@@ -37,6 +37,7 @@ class TaskListActivity : AppCompatActivity(), CellClickListener {
         Log.v("Subjects", "Subjects activity was started")
     }
 
+    // function to create a list of tasks
     private fun fetchList(): ArrayList<SubjectItem> {
         val list = arrayListOf<SubjectItem>()
 
@@ -50,6 +51,7 @@ class TaskListActivity : AppCompatActivity(), CellClickListener {
         return list
     }
 
+    //function to do smth when subject was clicked
     override fun onCellClickListener(data: SubjectItem) {
         //Toast.makeText(this,"Cell clicked", Toast.LENGTH_SHORT).show()
         val extras = Bundle()
