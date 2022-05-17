@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testinterface">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestInterface">
+        <activity
+            android:name=".ImagesActivity"
+            android:exported="false" />
         <activity
             android:name=".PracticeActivity"
             android:exported="false" />
@@ -24,8 +29,8 @@
         </activity>
         <activity android:name=".TaskListActivity" />
         <activity android:name=".StudyOptionsActivity" />
-        <activity android:name=".ChooseEgeActivity"/>
-        <activity android:name=".ComingSoonActivity"/>
+        <activity android:name=".ChooseEgeActivity" />
+        <activity android:name=".ComingSoonActivity" />
     </application>
 
 </manifest>

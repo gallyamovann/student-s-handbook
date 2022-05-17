@@ -4,34 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TheoryActivity">
+    tools:context=".ImagesActivity">
 
     <TextView
         android:id="@+id/IMG_NMB"
         android:layout_width="156dp"
         android:layout_height="17dp"
-        android:text="Изучаемая теория"
+        android:text="текст"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964" />
+        app:layout_constraintVertical_bias="0.708" />
 
-    <TextView
-        android:id="@+id/fromTheory"
-        android:layout_width="156dp"
-        android:layout_height="16dp"
-        android:text="Изучаемая теория"
+    <ImageView
+        android:id="@+id/imageTheory"
+        android:layout_width="217dp"
+        android:layout_height="372dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="298dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/backToSubjects"
+        android:id="@+id/backToTheory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
@@ -41,28 +42,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/imageButton"
-        android:layout_width="181dp"
-        android:layout_height="38dp"
+        android:id="@+id/nextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"
-        android:text="Изображения"
+        android:text="Следующее изображение"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <com.judemanutd.katexview.KatexView
-        android:id="@+id/TextViewData"
-        android:layout_width="384dp"
-        android:layout_height="497dp"
-        android:overScrollMode="ifContentScrolls"
-        app:layout_constraintBottom_toTopOf="@+id/backToSubjects"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238">
-
-    </com.judemanutd.katexview.KatexView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
