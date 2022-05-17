@@ -8,11 +8,10 @@
     tools:layout_editor_absoluteY="-31dp">
 
 
-
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="423dp"
+        android:layout_height="60dp"
         android:layout_marginTop="56dp"
         android:fadeScrollbars="false"
         android:filterTouchesWhenObscured="false"
@@ -22,7 +21,7 @@
         android:gravity="center"
         android:text="ВЫБОР
         ПРЕДМЕТА"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#070707"
         android:textColorHighlight="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +31,8 @@
 
     <Button
         android:id="@+id/toProfileMath"
-        android:layout_width="375dp"
-        android:layout_height="74dp"
+        android:layout_width="372dp"
+        android:layout_height="51dp"
         android:layout_marginTop="88dp"
         android:text="МАТЕМАТИКА ПРОФИЛЬ"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -46,8 +45,8 @@
 
     <Button
         android:id="@+id/toBasicMath"
-        android:layout_width="375dp"
-        android:layout_height="74dp"
+        android:layout_width="371dp"
+        android:layout_height="46dp"
         android:layout_marginTop="224dp"
         android:text="МАТЕМАТИКА БАЗА"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -60,8 +59,8 @@
 
     <Button
         android:id="@+id/toRus"
-        android:layout_width="375dp"
-        android:layout_height="74dp"
+        android:layout_width="371dp"
+        android:layout_height="57dp"
         android:layout_marginTop="360dp"
         android:text="РУССКИЙ ЯЗЫК"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -74,8 +73,8 @@
 
     <Button
         android:id="@+id/toMain"
-        android:layout_width="263dp"
-        android:layout_height="60dp"
+        android:layout_width="290dp"
+        android:layout_height="52dp"
         android:text="ВЕРНУТЬСЯ НАЗАД"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintBottom_toBottomOf="parent"

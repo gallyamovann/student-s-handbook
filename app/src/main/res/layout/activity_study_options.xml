@@ -8,33 +8,40 @@
 
 
     <Button
-        android:id="@+id/PracticeButton"
-        android:layout_width="248dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="480dp"
-        android:text="Практика"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/TheoryButton"
-        android:layout_width="248dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="580dp"
-        android:text="Теория"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/backToSubjects"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
         android:text="Вернуться назад"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="218dp"
+        android:layout_height="173dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/backToSubjects"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <Button
+            android:id="@+id/PracticeButton"
+            android:layout_width="212dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:text="Практика" />
+
+        <Button
+            android:id="@+id/TheoryButton"
+            android:layout_width="212dp"
+            android:layout_height="65dp"
+            android:text="Теория" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
