@@ -6,26 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".PracticeActivity">
 
-    <TextView
-        android:id="@+id/fromOption"
-        android:layout_width="158dp"
-        android:layout_height="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Изучаемая теория"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/fromPractice"
-        android:layout_width="147dp"
-        android:layout_height="19dp"
-        android:layout_marginBottom="16dp"
-        android:text="Изучаемая теория"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fromOption"
-        app:layout_constraintHorizontal_bias="0.245"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/backToSubjects"
         android:layout_width="wrap_content"
@@ -44,7 +24,8 @@
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -53,6 +34,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/backToSubjects"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText

@@ -27,8 +27,6 @@ class TheoryActivity : AppCompatActivity() {
             nameOfOption = intentExtras.getString("nameOfOption", "Default")
             taskNumber = intentExtras.getInt("taskNumber")
         }
-        findViewById<TextView>(R.id.fromOption).text = nameOfOption
-        findViewById<TextView>(R.id.fromTheory).text = taskNumber.toString()
         findViewById<Button>(R.id.backToSubjects).setOnClickListener {
             val extras = Bundle()
             Log.v("Subjects", "Back-to-subjects-activity button was pressed")

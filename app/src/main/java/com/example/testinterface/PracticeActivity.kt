@@ -31,8 +31,6 @@ class PracticeActivity : AppCompatActivity() {
             nameOfOption = intentExtras.getString("nameOfOption", "Default")
             taskNumber = intentExtras.getInt("taskNumber")
         }
-        findViewById<TextView>(R.id.fromOption).text = nameOfOption
-        findViewById<TextView>(R.id.fromPractice).text = taskNumber.toString()
         findViewById<Button>(R.id.backToSubjects).setOnClickListener {
             val extras = Bundle()
             Log.v("Subjects", "Back-to-subjects-activity button was pressed")
@@ -58,7 +56,6 @@ class PracticeActivity : AppCompatActivity() {
 
         val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM practice WHERE taskNumber=" + taskNumber.toString(), null)
 
-        //val cursor: Cursor = mDb!!.rawQuery("SELECT * FROM practice", null)
         cursor.moveToFirst()
         textViewPractice.setText(cursor.getString(1))
 
@@ -69,32 +66,37 @@ class PracticeActivity : AppCompatActivity() {
                         cursor.getColumnIndex("key")
                     )
                 ) {
-                    Toast.makeText(this, "CORRECT", Toast.LENGTH_SHORT).show()
+                    //если ответ верный
+                    Toast.makeText(this, "ВЕРНО!", Toast.LENGTH_SHORT).show()
+                    findViewById<TextInputEditText>(R.id.textInputPractice).setText("")
                     findViewById<Button>(R.id.CheckAnswerOrMoveNext).setBackgroundColor(resources.getColor(R.color.correct_answer_color))
                     findViewById<Button>(R.id.CheckAnswerOrMoveNext).text = "далее"
                     isCheckNow = false
 
                 } else {
-                    Toast.makeText(this, "INCORRECT", Toast.LENGTH_SHORT).show()
+                    //если неверный
+                    Toast.makeText(this, "НЕА :(", Toast.LENGTH_SHORT).show()
+                    findViewById<TextInputEditText>(R.id.textInputPractice).setText("")
                 }
             }
             else{
-                do {
+                if ((!cursor.isLast)) {
+                    //переключение
                     cursor.moveToNext()
-                    findViewById<Button>(R.id.CheckAnswerOrMoveNext).setBackgroundColor(
-                        resources.getColor(
-                            R.color.purple_500
-                        )
+                    findViewById<Button>(R.id.CheckAnswerOrMoveNext).setBackgroundColor(resources.getColor(R.color.purple_500)
                     )
                     findViewById<Button>(R.id.CheckAnswerOrMoveNext).text = "➜"
                     textViewPractice.setText(cursor.getString(1))
                     isCheckNow = true
-                } while ((!cursor.isLast))
+                }else{
+                    findViewById<TextInputEditText>(R.id.textInputPractice).setText("Ты все решил! Молодец :)")
+                    cursor.close()
+                }
             }
         }
 
 
-        cursor.close()
+       // cursor.close()
     }
 
 }
