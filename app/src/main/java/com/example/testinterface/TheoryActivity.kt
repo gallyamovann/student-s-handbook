@@ -12,15 +12,12 @@ import kotlinx.android.synthetic.main.activity_theory.*
 import java.io.IOException
 import java.sql.SQLException
 
-
 class TheoryActivity : AppCompatActivity() {
-    //
     private var mDBHelper: DatabaseHelper? = null
     private var mDb: SQLiteDatabase? = null
-
-    //
     var nameOfOption: String? = null
     var taskNumber: Int? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_theory)
@@ -39,16 +36,12 @@ class TheoryActivity : AppCompatActivity() {
             i.putExtras(extras)
             startActivity(i)
         }
-
-        //
         mDBHelper = DatabaseHelper(this)
-
         try {
             mDBHelper!!.updateDataBase()
         } catch (mIOException: IOException) {
             throw Error("UnableToUpdateDatabase")
         }
-
         mDb = try {
             mDBHelper!!.writableDatabase
         } catch (mSQLException: SQLException) {
@@ -67,37 +60,6 @@ class TheoryActivity : AppCompatActivity() {
         } else {
             Log.v("LOG_TAG", "Cursor is null")
         }
-//        val cursor1: Cursor =
-//            mDb!!.rawQuery("SELECT * FROM theory_images WHERE _id=" + taskNumber.toString(), null)
-//        val imageView = findViewById<ImageView>(R.id.imageViewTest)
-//
-//        // Declaring executor to parse the URL
-//        val executor = Executors.newSingleThreadExecutor()
-//        // Once the executor parses the URL
-//        // and receives the image, handler will load it
-//        // in the ImageView
-//        val handler = Handler(Looper.getMainLooper())
-//        // Initializing the image
-//        var image: Bitmap? = null
-//        // Only for Background process (can take time depending on the Internet speed)
-//        executor.execute {
-//            // Image URL
-//            val imageURL =
-//                "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
-//            // Tries to get the image and post it in the ImageView
-//            // with the help of Handler
-//            try {
-//                val `in` = java.net.URL(imageURL).openStream()
-//                image = BitmapFactory.decodeStream(`in`)
-//                // Only for making changes in UI
-//                handler.post {
-//                    imageView.setImageBitmap(image)
-//                }
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }
-//
         findViewById<Button>(R.id.imageButton).setOnClickListener {
             val extras = Bundle()
             Log.v("Subjects", "Image button was pressed")
